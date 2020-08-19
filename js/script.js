@@ -43,6 +43,7 @@ $('.services__spoiler-head').click(function (event) {
 
 
 const slider = document.querySelector('.swiper-container');
+const slider2 = document.querySelector('.swiper-container2');
 
 let mySwiper = new Swiper(slider, {
     speed: 400,
@@ -62,5 +63,31 @@ let mySwiper = new Swiper(slider, {
             spaceBetween: 70,
             centeredSlides: false,
         }
+    }
+});
+
+let galleryThumbs = new Swiper('.gallery-thumbs', {
+    slideClass: 'swiper-slide2',
+    wrapperClass: 'swiper-wrapper2',
+    spaceBetween: 10,
+    slidesPerView: 1,
+    loop: true,
+    simulateTouch: false,
+    allowTouchMove: false,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+});
+
+var galleryTop = new Swiper('.gallery-top', {
+    slideClass: 'swiper-slide2',
+    wrapperClass: 'swiper-wrapper2',
+    speed: 400,
+    slidesPerView: 3,
+    centeredSlides: true,
+    loop: true,
+    loopPreventsSlide: false,
+    slideToClickedSlide: true,
+    thumbs: {
+        swiper: galleryThumbs
     }
 });
