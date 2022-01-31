@@ -1026,6 +1026,7 @@ select {
 .swiper-container {
 	max-height: 484px;
 	padding: 40px 0;
+	overflow: hidden;
 }
 
 .swiper-wrapper {
